@@ -1,0 +1,22 @@
+<div class="sidebar" [class.half]="key !== null">
+  <header>
+    <div class="logo">
+      <img src="../../../assets/images/hasbrain-logo.png" alt="">
+    </div>
+    {{ key }}
+  </header>
+  <ul class="source__list">
+    <li *ngFor="let item of sources" class="source__item" (click)="onClickItem(item)" [class.active]="key === item.sourceId"
+      routerLink="/basic/{{ item.sourceId }}">
+      <div class="source__logo">
+        <img src="{{ item.sourceImage }}" alt="">
+      </div>
+      <a class="source__name">{{ item.title }}</a>
+    </li>
+  </ul>
+  <div class="source__search">
+    <div class="search-container">
+      <input type="text" placeholder="Search source">
+    </div>
+  </div>
+</div>

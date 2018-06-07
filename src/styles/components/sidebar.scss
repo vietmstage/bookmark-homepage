@@ -1,0 +1,140 @@
+.sidebar {
+  height: 100vh;
+  -webkit-user-select: none;
+  top: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #ebebeb;
+  z-index: 1000;
+  width: 65px;
+  left: 0px;
+  will-change: opacity;
+  position: fixed;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: width 0.2s, opacity 0.8s, box-shadow 0.1s linear 0.1s,
+    background-color 0.3s;
+  opacity: 0;
+  &:hover {
+    box-shadow: 3px 0 20px rgba(0, 0, 0, 0.2);
+    width: 260px;
+    opacity: 1;
+    .source__name {
+      color: #9498a0;
+    }
+    .source__search {
+      opacity: 1;
+      width: 260px;
+    }
+  }
+  &.half {
+    background-color: #f8f8f8;
+    opacity: 1;
+  }
+}
+header {
+  height: 65px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ebebeb;
+  .logo {
+    display: block;
+    float: left;
+    background-size: 30px auto;
+    width: 65px;
+    height: 65px;
+    border-right: 1px solid transparent;
+    transition: border 0.3s;
+    img {
+      height: 100%;
+    }
+  }
+}
+
+.source__list {
+  list-style: none;
+  width: 260px;
+  margin: 0;
+  padding: 0;
+}
+
+.source__item {
+  position: relative;
+  height: 50px;
+  &:hover {
+    background-color: #e8ebed;
+  }
+  &.active {
+    background-size: auto 13px;
+    background-color: #e8ebed;
+    color: #191a1c;
+  }
+}
+
+.source__logo {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 17px;
+  top: 10px;
+  overflow: hidden;
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.source__name {
+  transition: color 0.2s;
+  cursor: pointer;
+  color: rgba(148, 152, 160, 0);
+  opacity: 1;
+  text-decoration: none;
+  font-size: 13px;
+  padding: 0 0 0 65px;
+  line-height: 50px;
+  height: 50px;
+  display: block;
+  float: left;
+  letter-spacing: 0.2px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.source__search {
+  will-change: opacity;
+  opacity: 0;
+  z-index: 100;
+  transition: opacity 0.4s, width 0.4s;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  text-align: center;
+  .search-container {
+    padding: 20px;
+    background-color: #fff;
+  }
+  input {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 15px;
+    background-color: #eee;
+    padding: 8px 32px;
+    font-size: 13px;
+    line-height: 28px;
+    height: 28px;
+    text-align: center;
+    box-sizing: border-box;
+    margin: 0;
+    text-align: left;
+    &:focus {
+      outline: none;
+    }
+  }
+}

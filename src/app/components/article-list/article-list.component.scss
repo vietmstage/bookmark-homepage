@@ -1,0 +1,9 @@
+.article__list {
+  margin: 10px -15px 0;
+  /deep/ .article {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 15px 15px;
+    width: calc(25% - 30px);
+  }
+}
