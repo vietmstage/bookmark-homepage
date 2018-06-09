@@ -1,6 +1,15 @@
-<app-article-list [title]="'Latest stories'">
-  <div>
+<div class="heading">
+  <div class="heading__left">
+    <h2>Latest Articles</h2>
+  </div>
+  <!-- <div class="heading__right">
     <button>Popular</button>
     <button>Recent</button>
-  </div>
+  </div> -->
+</div>
+<app-article-list [articles]="articles" *ngIf="articles">
 </app-article-list>
+<div *ngIf="loadingArticle" style="text-align: center">Loading Article...</div>
+<div class="align-center" *ngIf="showLoadMore" style="margin-top: 10px; margin-bottom: 30px">
+  <button class="article__btn-load-more" (click)="loadMore()">Load More</button>
+</div>

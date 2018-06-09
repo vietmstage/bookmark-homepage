@@ -1,9 +1,13 @@
 <div class="article">
-  <div class="article__image">
-
-  </div>
+  <a class="article__image" href="{{ article.contentId }}" target="_blank">
+    <img src="{{ article.sourceImage }}" alt="">
+  </a>
   <div class="article__content">
-    <div class="article__title">title</div>
-    this is content
+    <a href="{{ article.contentId }}" target="_blank" class="article__title">{{ article.title || article.contentId }}</a>
+    <div class="article__actions">
+      <div class="article__source">
+        {{ article.domain }}
+      </div>
+    </div>
   </div>
 </div>

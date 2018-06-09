@@ -7,6 +7,7 @@ import { BasicHomeComponent } from './containers/basic-home/basic-home.component
 const routes: Routes = [
   { path: 'heroes', component: HeroesComponent },
   { path: '', component: HomeComponent },
+  { path: 'pages/newtab', component: HomeComponent },
   { path: 'basic/:sourceId', component: BasicHomeComponent }
 ]
 

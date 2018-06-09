@@ -9,6 +9,9 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -17,11 +20,24 @@ body {
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
-  background-color: #fff;
+  // background-color: #F8F8F8;
+}
+
+.align-center {
+  text-align: center;
 }
 
 .heading {
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
+  h2 {
+    color: #373D40;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 25px 0;
+    position: relative;
+    margin: 0;
+  }
 }

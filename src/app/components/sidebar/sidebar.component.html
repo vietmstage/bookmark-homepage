@@ -1,9 +1,8 @@
-<div class="sidebar" [class.half]="key !== null">
-  <header>
+<div class="sidebar" [class.half]="sources">
+  <header routerLink="/" (click)="onClickItem()">
     <div class="logo">
       <img src="../../../assets/images/hasbrain-logo.png" alt="">
     </div>
-    {{ key }}
   </header>
   <ul class="source__list">
     <li *ngFor="let item of sources" class="source__item" (click)="onClickItem(item)" [class.active]="key === item.sourceId"

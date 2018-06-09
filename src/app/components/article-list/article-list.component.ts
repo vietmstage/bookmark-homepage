@@ -5,7 +5,7 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './article-list.component.html'
 })
 export class ArticleListComponent implements OnInit {
-  @Input() title
+  @Input() articles: Array<Object>
   constructor() { }
 
   ngOnInit() {

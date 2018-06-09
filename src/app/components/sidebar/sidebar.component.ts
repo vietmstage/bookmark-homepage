@@ -21,8 +21,8 @@ export class SidebarComponent implements OnInit {
     })
   }
 
-  onClickItem(item) {
-    this.key = item.sourceId
+  onClickItem(item = {}) {
+    this.key = item['sourceId'] || null
   }
 
 }
